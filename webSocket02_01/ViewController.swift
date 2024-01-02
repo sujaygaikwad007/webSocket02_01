@@ -31,6 +31,8 @@ class ViewController: UIViewController {
             lblSocketMessage.text = "Nothing to show"
         }
     }
+    
+    
 }
 
 extension ViewController: WebSocketDelegate {
@@ -60,7 +62,7 @@ extension ViewController: WebSocketDelegate {
             break
         case .cancelled:
             isConnected = false
-            lblSocketConnection.text = "Disconnect"
+            lblSocketConnection.text = "Connect"
         case .error(let error):
             isConnected = false
             handleError(error)
